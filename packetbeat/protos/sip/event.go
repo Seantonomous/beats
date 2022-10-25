@@ -98,4 +98,6 @@ type ProtocolFields struct {
 	SDPConnInfo      common.NetString `ecs:"sdp.connection.info"`
 	SDPConnAddr      common.NetString `ecs:"sdp.connection.address"`
 	SDPBodyOriginal  common.NetString `ecs:"sdp.body.original"`
+
+	Headers          map[string][]common.NetString `ecs:"headers"`
 }

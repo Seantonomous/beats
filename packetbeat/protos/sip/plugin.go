@@ -460,6 +460,8 @@ func populateHeadersFields(cfg *config, m *message, evt beat.Event, pbf *pb.Fiel
 	if cfg.ParseAuthorization {
 		populateAuthFields(m, evt, pbf, fields)
 	}
+
+	fields.Headers = m.headers
 }
 
 func populateFromFields(m *message, pbf *pb.Fields, fields *ProtocolFields) {
